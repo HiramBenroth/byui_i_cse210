@@ -8,7 +8,6 @@ class Stat : Datum {
         name = n;
         statype = t;
         data = d;
-        Console.WriteLine($"[STAT] created with name: {n} and value: {d}");
     }
 
     public float getStat(){

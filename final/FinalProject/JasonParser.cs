@@ -17,30 +17,36 @@ public class JasonPaser {
         List<Newtonsoft.Json.Linq.JObject> root_node =
         ((Newtonsoft.Json.Linq.JArray)root["root"]).ToObject<List<Newtonsoft.Json.Linq.JObject>>();
         
-        return parse(root_node);
-    }
+        List<Datum> Stats = new List<Datum>();
 
-    private static Stats parse(List<Newtonsoft.Json.Linq.JObject> node){
-        List<Datum> node_list = new List<Datum>();
-        string Obj_name = "";
-        string Obj_type = "";
-        foreach(Newtonsoft.Json.Linq.JObject nodeObj in node){
-            Obj_name = nodeObj["name"].ToString(); 
-            Obj_type = nodeObj["type"].ToString();
+        ListModifier(Stats, root_node);
+
+        return (Stats)Stats[0];
+
+    }
+    static void ListModifier(List<Datum> CompileList, List<Newtonsoft.Json.Linq.JObject> Node){
+        foreach(Newtonsoft.Json.Linq.JObject nodeObj in Node){
+
+            string Obj_name = nodeObj["name"].ToString(); 
+            string Obj_type = nodeObj["type"].ToString();
         
+            //checks specific obj to see if it has a value
             if (nodeObj["contains"] is Newtonsoft.Json.Linq.JValue){
-                Console.WriteLine($"***** {Obj_name}: {Obj_type}, contains: {nodeObj["contains"]} ");
                 float Obj_data = float.Parse(nodeObj["contains"].ToString());
-                node_list.Add(new Stat(Obj_name, Obj_data, Obj_type));
+                CompileList.Add(new Stat(Obj_name, Obj_data, Obj_type)); // two objects are created with this name see line 46
             
             } else if (nodeObj["contains"] is Newtonsoft.Json.Linq.JArray) {
-                Console.WriteLine($"$$$$ {Obj_name}: {Obj_type}, contains: {nodeObj["contains"]} ");
-                List<Newtonsoft.Json.Linq.JObject> Obj_node =
+                List<Newtonsoft.Json.Linq.JObject> ChildrenNodes =
                     ((Newtonsoft.Json.Linq.JArray)nodeObj["contains"]).ToObject<List<Newtonsoft.Json.Linq.JObject>>();
-                node_list.Add(parse(Obj_node));
-            }
+
+                List<Datum> complist = new List<Datum>();
+                ListModifier(complist, ChildrenNodes);
+                
+                CompileList.Add(new Stats(complist, Obj_name, Obj_type));
+                
+            } 
+            // on the last object weather its a stat or not it will still create a [Stats] on the end of this.
         }
 
-        return new Stats(node_list, Obj_name, Obj_type);
-    } 
+    }
 }

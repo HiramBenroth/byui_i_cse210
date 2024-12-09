@@ -9,8 +9,6 @@ public class Stats: Datum {
         stats = data;
         name = n;
         type = t;
-
-        Console.WriteLine($"[STATS GROUP]created with name: {n} and type {t}");
     }
 
     public List<Datum> GetStats(){
