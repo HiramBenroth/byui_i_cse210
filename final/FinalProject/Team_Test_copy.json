@@ -15,43 +15,43 @@
             "contains": [
               { "name": "Points Per Game", "type": "Sum", "contains": 30.0 },
               { "name": "Rebounds Per Game", "type": "Avg", "contains": 6.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 7.5 }
+              { "name": "Assists Per Game", "type": "Avg", "contains": 7.5 }
             ]
           },
           {
             "name": "Klay Thompson",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 20.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 4.5 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 2.5 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 20.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 4.5 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 2.5 }
             ]
           },
           {
             "name": "Draymond Green",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 7.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 7.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 6.5 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 7.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 7.0 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 6.5 }
             ]
           },
           {
             "name": "Andrew Wiggins",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 17.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 5.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 2.0 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 17.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 5.0 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 2.0 }
             ]
           },
           {
             "name": "Kevon Looney",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 6.0 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 8.5 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 2.5 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 6.0 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 8.5 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 2.5 }
             ]
           }
         ]
@@ -64,45 +64,45 @@
             "name": "LeBron James",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 25.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 8.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 7.5 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 25.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 8.0 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 7.5 }
             ]
           },
           {
             "name": "Anthony Davis",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 23.0 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 10.5 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 2.5 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 23.0 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 10.5 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 2.5 }
             ]
           },
           {
             "name": "D'Angelo Russell",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 17.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 3.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 6.0 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 17.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 3.0 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 6.0 }
             ]
           },
           {
             "name": "Austin Reaves",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 13.0 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 3.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 3.5 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 13.0 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 3.0 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 3.5 }
             ]
           },
           {
             "name": "Rui Hachimura",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 11.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 4.5 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 1.0 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 11.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 4.5 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 1.0 }
             ]
           }
         ]
@@ -115,45 +115,45 @@
             "name": "Kevin Durant",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 28.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 7.5 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 4.0 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 28.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 7.5 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 4.0 }
             ]
           },
           {
             "name": "Devin Booker",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 26.0 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 4.5 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 5.5 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 26.0 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 4.5 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 5.5 }
             ]
           },
           {
             "name": "Bradley Beal",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 23.5 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 4.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 5.4 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 23.5 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 4.0 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 5.4 }
             ]
           },
           {
             "name": "Deandre Ayton",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 16.0 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 10.0 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 1.8 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 16.0 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 10.0 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 1.8 }
             ]
           },
           {
             "name": "Josh Okogie",
             "type": "Player",
             "contains": [
-              { "name": "Points Per Game", "type": "Stat", "contains": 7.0 },
-              { "name": "Rebounds Per Game", "type": "Stat", "contains": 3.5 },
-              { "name": "Assists Per Game", "type": "Stat", "contains": 1.0 }
+              { "name": "Points Per Game", "type": "Sum", "contains": 7.0 },
+              { "name": "Rebounds Per Game", "type": "Avg", "contains": 3.5 },
+              { "name": "Assists Per Game", "type": "Avg", "contains": 1.0 }
             ]
           }
         ]

@@ -7,30 +7,52 @@ class Program
     {
         Stats league = JasonPaser.LoadJson("Team_Test_copy.json");
 
-        // Display the object hierarchy
-
-        //league.Display();
-
-        Display(league);
+        while (MainMenu(league)){}
     }
 
-    static void Display(Datum datum, int tab = 0){
-        string indent = new string('\t', tab);
-        if (datum is Stats) {
-            Stats stats = (Stats)datum;
-            string t = datum.getType();
-            string n = datum.getName();
-            
-            Console.WriteLine($"{indent}{t}: {n}");
+    public static bool MainMenu(Stats stat){
+        List<string> Options = [
+                                    "1) Navigate the Entire Group",
+                                    "2) Head on Head Match Up",
+                                    "3) Look At Combined Stats for entire League",
+                                    "4) Exit",
+                                ];
 
-            foreach (Datum d in stats.GetStats()){
-                Display(d, tab + 1);
+        Console.Clear();
+        Console.WriteLine("Welocme to this Team matchup program\nHere are your options");
+        foreach (string opt in Options){Console.WriteLine(opt);}  
+        
+        int choice = 0;
+        do {
+            Console.WriteLine("Please Input a number between 1-4");
+            choice = int.Parse(Console.ReadLine());
+        }while ( 1 < choice && choice > 3 );
+
+        switch (choice){
+            case 1:
+                Display.NavigationMenu(stat);
+                break;
+            case 2:
+                Display.Wait("To select a team to compare, get to the desired level.\nThen input -1, you will be prompted if you want to select that Entity.");
+                List<Stats> s = Display.NavigationMenu(stat, true);
+                s = Analyze.Combine(s);
+                foreach (Stats stats in s){
+                    Display.EntireStats(stats);                    
+                }
+                Display.Wait("Enter to see Predicted Team");
+                Analyze.Compare(s);
+                break;
+            case 3:
+                Display.EntireStats(stat.getData());
+                Display.Wait();
+                break;
+            case 4:
+                Console.WriteLine("Have a good Day");
+                return false;
+            default:
+                break;
             }
-        } else {
-            Stat stat = (Stat)datum;
-            Console.WriteLine($"{indent}{stat.getName()}: {stat.getStat()}");
-        }
-
-
+        
+        return true;
     }
 }

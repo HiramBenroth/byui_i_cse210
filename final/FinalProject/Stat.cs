@@ -1,4 +1,5 @@
 using System.Dynamic;
+using System.Text.RegularExpressions;
 
 class Stat : Datum {
     private string statype; // type of analysis performed
@@ -13,16 +14,27 @@ class Stat : Datum {
     public float getStat(){
         return data;
     }
-
-    public void Display(){
-        Console.WriteLine($"{name}: {data}");
-    }
-    public Datum getData(){ return this;}
     public string getName(){ return name;}
     public string getType(){return statype;}
-    public bool Compare(Datum a, Datum b){
-        return true;
+
+    public Stat Combine(Stat s = null){
+        float d = 0;
+        
+        if (s == null) {} else if (name == s.getName()){
+
+            d = data + s.getStat();
+        } 
+        return new Stat(name,  d, statype);
     }
 
+    public void UpdateType(int Avg){
+        switch (statype){
+            case "Avg":
+                data = data / Avg;
+                break;
+            case "Sum":
+                break;
+        }
+    }
 
 }
